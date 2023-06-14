@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="RTTManz",
-    version="0.2.2",
+    version="0.3.0",
     author="Yu-Sen Cheng (DTDwind)",
     description="A simple Python package for analyzing the necessary data in Speaker Diarization using oracle RTTM files and audio files.",
     keywords="analyze rttm",

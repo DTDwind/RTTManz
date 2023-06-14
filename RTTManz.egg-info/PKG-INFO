@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: RTTManz
+Version: 0.2.2
+Summary: A simple Python package for analyzing the necessary data in Speaker Diarization using oracle RTTM files and audio files.
+Home-page: https://github.com/DTDwind/RTTManz
+Author: Yu-Sen Cheng (DTDwind)
+License: Apache-2.0 License
+Keywords: analyze rttm
+Description-Content-Type: text/markdown
+License-File: LICENSE
