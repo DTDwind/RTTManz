@@ -12,3 +12,13 @@ $ git clone https://github.com/DTDwind/RTTManz.git
 $ cd RTTManz
 $ pip install -e .
 ```
+
+## How to run
+After installation, run
+```
+python3 RTTManz.py --rttm_path [INPUT_RTTMS_PATH] --audio_path [INPUT_AUDIOS_PATH]
+```
+Example pipeline:
+```
+./AMI_run.sh
+```
