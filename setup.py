@@ -15,7 +15,7 @@ setup(
         'numpy>=1.22.4',
         'argparse',
         'itertools',
-        'soundfile==0.10.2',
+        'soundfile>=0.10.2',
         'pathlib',
         'collections',
         'tabulate>=0.9.0',
@@ -23,6 +23,5 @@ setup(
     dependency_links=[],
     license="Apache-2.0 License",
     packages=find_packages(),
-    long_description=long_description,
     long_description_content_type="text/markdown",
 )
