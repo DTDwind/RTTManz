@@ -7,13 +7,14 @@ testset_path=example/ami/ami_testset
 
 if [ $stage -le 0 ]; then
     echo "Stage 0: Download ami test corpus."
-    ./example/ami/amiBuild.wget.sh
+    ./example/ami/amitestBuild.wget.sh
     AMIcorpus=example/ami/amicorpus 
 fi
 
 if [ $stage -le 1 ]; then
     echo "Stage 1: Preparing data."
     mkdir -p $testset_path
+    rm $testset_path/*
     for audio_path in $(find $AMIcorpus/*/audio -name *.wav)
     do
         audio_name=`basename $audio_path`
