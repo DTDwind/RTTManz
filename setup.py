@@ -14,7 +14,7 @@ setup(
     install_requires=[
         'numpy>=1.22.4',
         'argparse',
-        'itertools',
+
         'soundfile>=0.10.2',
         'pathlib',
         'collections',
