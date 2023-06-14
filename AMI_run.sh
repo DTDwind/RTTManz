@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-stage=1
+stage=0
 AMIcorpus=example/ami/amicorpus # If you already have amicorpus, please set the path to that location and skip stage 0.
 oracle_rttm_path=example/ami/rttm
 testset_path=example/ami/ami_testset
@@ -17,11 +17,11 @@ if [ $stage -le 1 ]; then
     for audio_path in $(find $AMIcorpus/*/audio -name *.wav)
     do
         audio_name=`basename $audio_path`
-        # echo  $audio_path
+        new_audio_name=$(basename "$audio_name" .Mix-Headset.wav).wav
         for test_name in $(cat example/ami/ami_testset_list.txt)
         do
             if [ $audio_name == $test_name ]; then
-                ln -s `pwd`/$audio_path $testset_path
+                ln -s `pwd`/$audio_path $testset_path/$new_audio_name
             fi
         done
     done
