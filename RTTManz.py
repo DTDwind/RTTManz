@@ -126,9 +126,6 @@ def run(args):
         reco_dict[reco_id].non_speech_time = np.sum(num_speakers_per_frame == 0)
         reco_dict[reco_id].speaker_ratio   = ratios
 
-# python3 RTTManz.py --rttm_path /mnt/HDD/HDD2/DTDwind/kaldi/egs/ami/s5c/data/test/rttm --audio_path /mnt/HDD/HDD2/DTDwind/AMI_corpus/amicorpus_test
-# python3 RTTManz.py --rttm_path /mnt/HDD/HDD2/DTDwind/vbx_new/VBx/data/AMI_Mix-Headset/rttms/test --audio_path /mnt/HDD/HDD2/DTDwind/AMI_corpus/amicorpus_test
-
     # statistics result
     data = []
     total_frame = 0
