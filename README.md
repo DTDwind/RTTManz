@@ -22,3 +22,8 @@ Example pipeline:
 ```
 ./AMI_run.sh
 ```
+
+## Results
+We provide a sample result on the AMI mix-headset test set:
+![image](example/ami/result/AMI_testset_result.png)
+
