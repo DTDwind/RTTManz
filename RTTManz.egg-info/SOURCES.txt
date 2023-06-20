@@ -1,8 +1,0 @@
-LICENSE
-README.md
-setup.py
-RTTManz.egg-info/PKG-INFO
-RTTManz.egg-info/SOURCES.txt
-RTTManz.egg-info/dependency_links.txt
-RTTManz.egg-info/requires.txt
-RTTManz.egg-info/top_level.txt
