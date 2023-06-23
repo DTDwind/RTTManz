@@ -133,6 +133,10 @@ def run(args):
     total_overlap_frame = 0
     max_speaker_num = 0
     min_speaker_num = 1e16
+    max_time = 0
+    max_time_name = ""
+    min_time = 1e16
+    min_time_name = ""
     counter = 0
 
     for reco_id in reco_dict:
@@ -157,6 +161,13 @@ def run(args):
             max_speaker_num = speaker_number
         if speaker_number < min_speaker_num:
             min_speaker_num = speaker_number
+
+        if reco_dict[reco_id].frame_num > max_time:
+            max_time = reco_dict[reco_id].frame_num
+            max_time_name = reco_id
+        if reco_dict[reco_id].frame_num < min_time:
+            min_time = reco_dict[reco_id].frame_num
+            min_time_name = reco_id
 
         speaker_ratio = ":".join(map(str, reco_dict[reco_id].speaker_ratio))
         row.append(speaker_ratio)
@@ -189,10 +200,12 @@ def run(args):
     row.append("{:.2%}".format(overlap_ratio))
     row.append(max_speaker_num)
     row.append(min_speaker_num)
+    row.append(max_time_name)
+    row.append(min_time_name)
     data.append(row)
 
     print("")
-    headers = ["Reco Number", "Total Time", "Total Speech Time", "Overlap Ratio", "Max Speaker Number", "Min Speaker Number"]
+    headers = ["Reco Number", "Total Time", "Total Speech Time", "Overlap Ratio", "Max Speaker Number", "Min Speaker Number", "Max Time Reco ", "Min Time Reco"]
     print(tabulate(data, headers=headers, tablefmt="grid"))
 
 def main():
